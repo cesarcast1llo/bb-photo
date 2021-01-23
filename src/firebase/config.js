@@ -5,6 +5,7 @@ import 'firebase/firestore';
 // Firebase configuration
 var firebaseConfig = {
   apiKey: 'AIzaSyBnU7_s6iIzVq3X1zD6yArPLFB5Vf0p-YA',
+  // TODO hide with .env File
   authDomain: 'bb-photo.firebaseapp.com',
   projectId: 'bb-photo',
   storageBucket: 'bb-photo.appspot.com',
