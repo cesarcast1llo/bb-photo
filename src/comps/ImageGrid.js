@@ -10,10 +10,9 @@ const ImageGrid = ({ setSelectedImg }) => {
     <div className="img-grid">
       {docs &&
         docs.map((doc) => (
-          <>
+          <div key={doc.id}>
             <motion.div
               className="img-wrap"
-              key={doc.id}
               layout
               onClick={() => setSelectedImg(doc.url)}
             >
@@ -25,12 +24,14 @@ const ImageGrid = ({ setSelectedImg }) => {
                 transition={{ delay: 1 }}
               />
             </motion.div>
-            {console.log(doc.url)}
-            {console.log(new Date(doc.createdAt.nanoseconds))}
             <div className="date-title">
-              {new Date(doc.createdAt.toDate()).toDateString()}
+              {doc.createdAt.toDate().toDateString()}
+              {/* TODO need to make date work before upload */}
+
+              {doc.name}
+              {/* TODO need to grab name from storage */}
             </div>
-          </>
+          </div>
         ))}
     </div>
   );

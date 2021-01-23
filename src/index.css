@@ -35,12 +35,18 @@ form {
   margin: 30px auto 10px;
   text-align: center;
 }
-label input {
+
+label.input-name input {
+  width: 300px;
+}
+
+label.upload-image input {
   height: 0;
   width: 0;
   opacity: 0;
 }
-label {
+
+label.upload-image {
   display: block;
   width: 30px;
   height: 30px;
@@ -52,7 +58,8 @@ label {
   font-weight: bold;
   font-size: 24px;
 }
-label:hover {
+
+label.upload-image:hover {
   background: var(--primary);
   color: white;
 }
@@ -64,6 +71,12 @@ label:hover {
 
 .error {
   color: var(--error);
+}
+
+.date-title {
+  font-weight: 700;
+  text-align: center;
+  color: red;
 }
 
 /* progress bar styles */
@@ -82,10 +95,6 @@ label:hover {
 }
 .img-wrap {
   overflow: hidden;
-  height: 0;
-  padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
-  position: relative;
   opacity: 0.8;
 }
 
@@ -94,12 +103,8 @@ label:hover {
 }
 
 .img-wrap img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 300px;
+  min-height: 270px;
 }
 
 /* modal styles */
