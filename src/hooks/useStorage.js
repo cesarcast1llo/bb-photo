@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import { projectStorage } from '../firebase/config';
 
 const useStorage = (file) => {
@@ -8,7 +7,6 @@ const useStorage = (file) => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
-    //   references
     const storageRef = projectStorage.ref(file.name);
 
     storageRef.put(file).on(
@@ -21,11 +19,13 @@ const useStorage = (file) => {
         setError(err);
       },
       async () => {
-        const url = await storageRef.getDownloadUrl();
+        const url = await storageRef.getDownloadURL();
         setUrl(url);
       }
     );
   }, [file]);
+
   return { progress, url, error };
 };
+
 export default useStorage;
