@@ -3,9 +3,7 @@ import React from 'react';
 const Title = () => {
   return (
     <div className="title">
-      <h1>bb collage</h1>
-      <h2>bb</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiasdasdscing elit.</p>
+      <h1>BBG 2021</h1>
     </div>
   );
 };

@@ -1,23 +1,19 @@
-import { firebase } from '@firebase/app';
+import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 
-// Firebase configuration
 var firebaseConfig = {
-  apiKey: 'AIzaSyBnU7_s6iIzVq3X1zD6yArPLFB5Vf0p-YA',
-  // TODO hide with .env File
-  authDomain: 'bb-photo.firebaseapp.com',
-  projectId: 'bb-photo',
-  storageBucket: 'bb-photo.appspot.com',
-  messagingSenderId: '745724473332',
-  appId: '1:745724473332:web:a5004b681faf7ee13353a1',
+  apiKey: 'AIzaSyBRS-ab6VXQoXAJ-GwRlezT8D4by13vmCE',
+  authDomain: 'bb2021-b47fe.firebaseapp.com',
+  projectId: 'bb2021-b47fe',
+  storageBucket: 'bb2021-b47fe.appspot.com',
+  messagingSenderId: '354271684651',
+  appId: '1:354271684651:web:bf94318151f9a53df7e26e',
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
-const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { projectStorage, projectFirestore, timestamp };
+export { projectFirestore, projectStorage };
