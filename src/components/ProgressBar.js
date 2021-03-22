@@ -12,7 +12,7 @@ const ProgressBar = ({ file, setFile }) => {
   }, [url, setFile]);
   return (
     <div className="progress-bar" style={{ width: progress + '%' }}>
-      uploading{' '}
+      uploading&nbsp;
       <span role="img" aria-label="img">
         🤪
       </span>
